@@ -2,7 +2,12 @@
   - if current_user.referral_emails.count > 0
     %h3
       List of Emails you Referred:
+    .row
+      - @referred_emails.each do |referred_email|
+        .col
+          = referred_email.receiver
   - else
     .alert.alert-warning
       %b
         You have not sent any referrals yet.
+    %div.text-center

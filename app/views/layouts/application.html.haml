@@ -27,6 +27,8 @@
           %li.nav-item
             = link_to 'Referrals', api_v1_referrals_path, class: 'nav-link'
           %li.nav-item
+            = link_to 'Send Referral', new_api_v1_referral_path, class: 'nav-link'
+          %li.nav-item
             = button_to 'Log Out', destroy_user_session_path, class: 'btn btn-danger text-white nav-link', method: :delete
         - else
           %li.nav-item

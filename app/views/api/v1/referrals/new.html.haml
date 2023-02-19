@@ -1,0 +1,6 @@
+
+%center
+  = form_with model: @referral_email, url: api_v1_referrals_path do |form|
+    = form.label 'Receiver Email'
+    = form.text_field :receiver
+    = form.submit 'Send Referral Email', class: 'btn btn-primary'
