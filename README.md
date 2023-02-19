@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Setup
+- Set  `ENV['SMTP_USERNAME']` and `ENV['SMTP_PASSWORD']` with your Gmail.com's username and password respectively.
+- Set `DEVISE_JWT_SECRET_KEY` with output of `rake secret`
+- Run `EDITOR=vim rails credentials:edit` to Open credentials file and add your MySQL database username and password
+- Run `RAILS_ENV=development bin/bundle exec rails db:create` to create MySQL Database
+- Run `RAILS_ENV=development bin/bundle exec rails db:migrate` to migrate database.
+- Run `RAIRS_ENV=development bin/dev` to run development server and then visit `http://localhost:3000`
