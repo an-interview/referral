@@ -1,0 +1,9 @@
+%center
+  %h1
+    Welcome to Referral App
+  - unless current_user.nil?
+    %big
+      Visit Referrals Menu
+  - else
+    %big
+      SignIn to use the app.
