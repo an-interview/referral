@@ -2,10 +2,17 @@
   - if current_user.referral_emails.count > 0
     %h3
       List of Emails you Referred:
-    .row
+    %table.table.table-striped
+      %th.text-center
+        Receiver
+      %th.text-center
+        Sent Date
       - @referred_emails.each do |referred_email|
-        .col
-          = referred_email.receiver
+        %tr
+          %td.text-center
+            = referred_email.receiver
+          %td.text-center
+            = referred_email.created_at
     .row
       .col
         = paginate @referred_emails

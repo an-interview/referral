@@ -17,6 +17,8 @@ class Api::V1::ReferralsController < ApplicationController
 
     begin
       @referral_email.save!
+      ReferralEmailMailer.with(sender: current_user.email,
+                               receiver: @referral_email.receiver).referral_email.deliver_now
       # TODO implement action mailer
       # @referral_email.send_now
       flash[:notice] = 'Email Sent Successfully.'
