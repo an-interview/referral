@@ -68,6 +68,7 @@ end
 gem 'devise'
 gem 'devise-jwt'
 gem 'haml'
+gem 'kaminari'
 gem 'mysql2'
 gem 'rack-cors'
 gem 'sass-rails'

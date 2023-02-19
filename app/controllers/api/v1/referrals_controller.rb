@@ -8,7 +8,7 @@ class Api::V1::ReferralsController < ApplicationController
   end
 
   def index
-    @referred_emails = ReferralEmail.where(sender: current_user).all
+    @referred_emails = ReferralEmail.where(sender: current_user).page(params[:page]).per(50)
   end
 
   def create

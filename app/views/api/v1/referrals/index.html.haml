@@ -6,6 +6,9 @@
       - @referred_emails.each do |referred_email|
         .col
           = referred_email.receiver
+    .row
+      .col
+        = paginate @referred_emails
   - else
     .alert.alert-warning
       %b
