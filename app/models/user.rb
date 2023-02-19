@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :registerable,
          :jwt_authenticatable,
          jwt_revocation_strategy: JwtDenyList
+
+  has_many :referral_emails, class_name: 'ReferralEmail', foreign_key: 'sender_id'
 end
