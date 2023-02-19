@@ -1,3 +1,8 @@
 %center
-  %h3
-    List of Emails you Referred:
+  - if current_user.referral_emails.count > 0
+    %h3
+      List of Emails you Referred:
+  - else
+    .alert.alert-warning
+      %b
+        You have not sent any referrals yet.

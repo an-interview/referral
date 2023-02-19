@@ -4,6 +4,5 @@ class Api::V1::ReferralsController < ApplicationController
   def welcome; end
 
   def index
-    current_user
   end
 end
