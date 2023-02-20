@@ -7,5 +7,6 @@
 - Run `EDITOR=vim rails credentials:edit` to Open credentials file and add your MySQL database username and password
 - Run `RAILS_ENV=development bin/bundle exec rails db:create` to create MySQL Database
 - Run `RAILS_ENV=development bin/bundle exec rails db:migrate` to migrate database.
+- Run `RAILS_ENV=production rails assets:precompile` for production environment.
 - Run `RAIRS_ENV=development bin/dev` to run development server and then visit `http://localhost:3000`
 - Replace `development` with `production` in above commands as required
